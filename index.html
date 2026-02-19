@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Climbing</title>
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px solid;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+    <p style="font-size: 36px;"><strong>Add New Entry</strong></p>
+
+    <form id="entry-form" style="font-size: 36px;">
+
+      <label for="gradient1">Gradient (%):</label>
+      <input type="number" id="gradient1">
+
+      <label for="velocity1">Velocity (km/h):</label>
+      <input type="number" id="velocity1">
+
+      <label for="mass1">Mass (kg):</label>
+      <input type="number" id="mass1">
+
+      <label for="power1">Power (W):</label>
+      <input type="number" id="power1">
+
+      <label for="gradient2">Gradient (%):</label>
+      <input type="number" id="gradient2">
+
+      <label for="distance2">Distance (km):</label>
+      <input type="number" id="distance2">
+
+      <label for="velocity2">Velocity (km/h):</label>
+      <input type="number" id="velocity2">
+
+      <label for="power2">Power (W):</label>
+      <input type="number" id="power2">
+
+      <label for="time2">Time (s):</label>
+      <input type="number" id="time2">
+
+      <label for="mass2">Mass (kg):</label>
+      <input type="number" id="mass2">
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+
+
+
+  <script>
+    
+    const g = 9.81;
+    const crr = 0.005;
+    const rho = 1.226;
+    const cda = 0.45;
+    
+
+    const entryForm = document.getElementById('entry-form');
+
+    entryForm.onsubmit = async (e) => {
+      e.preventDefault();
+      const gradient1 = entryForm.gradient1.value;
+      const velocity1 = entryForm.velocity1.value;
+      const mass1 = entryForm.mass1.value;
+
+      const power1 = mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)^2
+      const x = 1;
+
+    }; //entryForm.onsubmit
+
+  </script>
+
+</body>
+
+</html>
