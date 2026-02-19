@@ -77,7 +77,7 @@
       const velocity1 = entryForm.velocity1.value;
       const mass1 = entryForm.mass1.value;
 
-      const power1 = mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)^2
+      const power1 = mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*Math.cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)^2
       const x = 1;
 
     }; //entryForm.onsubmit
