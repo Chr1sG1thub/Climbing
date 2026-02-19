@@ -8,21 +8,13 @@
       font-family: Arial, sans-serif;
     }
 
-    table,
-    td,
-    th {
-      border: 1px solid;
-      padding: 10px;
-    }
   </style>
 </head>
 
 <body>
 
 
-    <p style="font-size: 36px;"><strong>Add New Entry</strong></p>
-
-    <form id="entry-form" style="font-size: 36px;">
+    <form id="entry-form">
 
       <label for="gradient1">Gradient (%):</label>
       <input type="number" step="0.1" id="gradient1">
@@ -72,9 +64,9 @@
 
     entryForm.onsubmit = async (e) => {
       e.preventDefault();
-      const gradient1 = entryForm.gradient1.value;
-      const velocity1 = entryForm.velocity1.value;
-      const mass1 = entryForm.mass1.value;
+      const gradient1 = parseFloat(entryForm.gradient1.value);
+      const velocity1 = parseFloat(entryForm.velocity1.value);
+      const mass1 = parseFloat(entryForm.mass1.value);
 
       const power1 = mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*Math.cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)^2
       document.getElementById('power1').textContent = power1;
