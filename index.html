@@ -68,7 +68,7 @@
       const velocity1 = parseFloat(entryForm.velocity1.value);
       const mass1 = parseFloat(entryForm.mass1.value);
 
-      const power1 = mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*Math.cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)^2
+      const power1 = mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*Math.cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)**2
       document.getElementById('power1').textContent = power1;
 
     }; //entryForm.onsubmit
