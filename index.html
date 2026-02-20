@@ -12,7 +12,8 @@
       text-align: right;
     }
 
-    span {
+    .result {
+      background-color: chartreuse;
       text-size: 14px;
       text-align: right;
     }
@@ -26,12 +27,12 @@
 
       <table>
         <tr><td>Gradient (%)</td><td>Distance (km)</td><td>Velocity (km/h)</td><td>Mass (kg)</td><td>Power (W)</td><td>Time (s)</td></tr>
-        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient1"></td><td></td><td style="background-color: yellow"><input type="number" step="0.01" id="velocity1"></td><td style="background-color: yellow"><input type="number" id="mass1"></td><td style="background-color: chartreuse"><span id="power1">&nbsp;</span></td><td></td></tr>
-        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient2"></td><td></td><td style="background-color: chartreuse"><span id="velocity2">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="mass2"></td><td style="background-color: yellow"><input type="number" id="power2"></td><td></td></tr>
-        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient3"></td><td></td><td style="background-color: yellow"><input type="number" step="0.01" id="velocity3"></td><td style="background-color: chartreuse"><span id="mass3">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="power3"></td><td></td></tr>
-        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient4"></td><td style="background-color: yellow"><input type="number" step="0.01" id="distance4"></td><td></td><td style="background-color: yellow"><input type="number" id="mass4"></td><td style="background-color: chartreuse"><span id="power4">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="time4"></td></tr>
-        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient5"></td><td style="background-color: yellow"><input type="number" step="0.01" id="distance5"></td><td></td><td style="background-color: yellow"><input type="number" id="mass5"></td><td style="background-color: yellow"><input type="number" id="power5"></td><td style="background-color: chartreuse"><span id="time5">&nbsp;</span></td></tr>
-        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient6"></td><td style="background-color: yellow"><input type="number" step="0.01" id="distance6"></td><td></td><td style="background-color: chartreuse"><span id="mass6">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="power6"></td><td style="background-color: yellow"><input type="number" id="time6"></td></tr>
+        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient1"></td><td></td><td style="background-color: yellow"><input type="number" step="0.01" id="velocity1"></td><td style="background-color: yellow"><input type="number" id="mass1"></td><td class="result"><span id="power1">&nbsp;</span></td><td></td></tr>
+        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient2"></td><td></td><td class="result"><span id="velocity2">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="mass2"></td><td style="background-color: yellow"><input type="number" id="power2"></td><td></td></tr>
+        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient3"></td><td></td><td style="background-color: yellow"><input type="number" step="0.01" id="velocity3"></td><td class="result"><span id="mass3">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="power3"></td><td></td></tr>
+        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient4"></td><td style="background-color: yellow"><input type="number" step="0.01" id="distance4"></td><td></td><td style="background-color: yellow"><input type="number" id="mass4"></td><td class="result"><span id="power4">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="time4"></td></tr>
+        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient5"></td><td style="background-color: yellow"><input type="number" step="0.01" id="distance5"></td><td></td><td style="background-color: yellow"><input type="number" id="mass5"></td><td style="background-color: yellow"><input type="number" id="power5"></td><td class="result"><span id="time5">&nbsp;</span></td></tr>
+        <tr><td style="background-color: yellow"><input type="number" step="0.1" id="gradient6"></td><td style="background-color: yellow"><input type="number" step="0.01" id="distance6"></td><td></td><td class="result"><span id="mass6">&nbsp;</span></td><td style="background-color: yellow"><input type="number" id="power6"></td><td style="background-color: yellow"><input type="number" id="time6"></td></tr>
       </table>
 
       
