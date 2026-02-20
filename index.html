@@ -113,6 +113,11 @@
 
     entryForm.onsubmit = async (e) => {
       e.preventDefault();
+
+      if (entryForm.gradient1.value.trim().length != 0 &&
+          entryForm.velocity1.value.trim().length != 0 &&
+          entryForm.mass1.value.trim().length != 0) {
+          
       const gradient1 = parseFloat(entryForm.gradient1.value);
       const velocity1 = parseFloat(entryForm.velocity1.value);
       const mass1 = parseFloat(entryForm.mass1.value);
@@ -120,6 +125,12 @@
       const power1 = (mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*Math.cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)**2).toFixed(0);
       document.getElementById('power1').textContent = power1;
 
+      }
+
+      if (entryForm.gradient2.value.trim().length != 0 &&
+          entryForm.power2.value.trim().length != 0 &&
+          entryForm.mass2.value.trim().length != 0) {
+          
       const gradient2 = parseFloat(entryForm.gradient2.value);
       const power2 = parseFloat(entryForm.power2.value);
       const mass2 = parseFloat(entryForm.mass2.value);
@@ -127,6 +138,12 @@
       const velocity2 = ((-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+Math.sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6).toFixed(1);
       document.getElementById('velocity2').textContent = velocity2;
 
+      }
+
+      if (entryForm.gradient3.value.trim().length != 0 &&
+          entryForm.velocity3.value.trim().length != 0 &&
+          entryForm.power3.value.trim().length != 0) {
+          
       const gradient3 = parseFloat(entryForm.gradient3.value);
       const velocity3 = parseFloat(entryForm.velocity3.value);
       const power3 = parseFloat(entryForm.power3.value);
@@ -134,22 +151,44 @@
       const mass3 = (power3-0.5*rho*cda*(gradient3/3.6)**2)/g/(velocity3/3.6)/(gradient3/100+crr*Math.cos(gradient3/100)).toFixed(1);
       document.getElementById('mass3').textContent = mass3;
 
+      }
+
+      if (entryForm.gradient4.value.trim().length != 0 &&
+          entryForm.distance4.value.trim().length != 0 &&
+          entryForm.time4.value.trim().length != 0 &&
+          entryForm.mass4.value.trim().length != 0) {
+          
       const gradient4 = parseFloat(entryForm.gradient4.value);
       const distance4 = parseFloat(entryForm.distance4.value);
       const time4 = parseFloat(entryForm.time4.value);
       const mass4 = parseFloat(entryForm.time4.value);
+        
 
       const power4 = (mass4*g*gradient4/100*(distance4*1000/time4)+crr*mass4*g*Math.cos(gradient4/100)*(distance4*1000/time4)+0.5*rho*cda*(distance4*1000/time4)**2).toFixed(1);
       document.getElementById('power4').textContent = power4;
+
+      }
       
-      const gradient5 = parseFloat(entryForm.gradient5.value);
+      if (entryForm.gradient5.value.trim().length != 0 &&
+          entryForm.distance5.value.trim().length != 0 &&
+          entryForm.power5.value.trim().length != 0 &&
+          entryForm.mass5.value.trim().length != 0) {
+
+        const gradient5 = parseFloat(entryForm.gradient5.value);
       const distance5 = parseFloat(entryForm.distance5.value);
       const power5 = parseFloat(entryForm.power5.value);
       const mass5 = parseFloat(entryForm.mass5.value);
 
       const time5 = (distance5*3600/((-(mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))+Math.sqrt((mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))**2-4*0.5*rho*cda*(-power5)))/(2*0.5*rho*cda)*3.6)).toFixed(1);
       document.getElementById('time5').textContent = time5;
+
+      }
       
+      if (entryForm.gradient6.value.trim().length != 0 &&
+          entryForm.distance6.value.trim().length != 0 &&
+          entryForm.power6.value.trim().length != 0 &&
+          entryForm.time6.value.trim().le6ngth != 0) {
+        
       const gradient6 = parseFloat(entryForm.gradient6.value);
       const distance6 = parseFloat(entryForm.distance6.value);
       const power6 = parseFloat(entryForm.power6.value);
@@ -157,6 +196,9 @@
 
       const mass6 = (power3-0.5*rho*cda*(gradient3/3.6)**2)/g/(velocity3/3.6)/(gradient3/100+crr*Math.cos(gradient3/100)).toFixed(1);
       document.getElementById('mass6').textContent = mass6;
+
+      }
+        
    }; //entryForm.onsubmit
 
   </script>
