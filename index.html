@@ -67,7 +67,7 @@
       const power2 = parseFloat(entryForm.power2.value);
       const mass2 = parseFloat(entryForm.mass2.value);
 
-      const velocity2 = ((-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+Math.sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6).toFixed(1);
+      const velocity2 = ((-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+Math.sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6).toFixed(2);
       document.getElementById('velocity2').textContent = velocity2;
 
       }
@@ -96,7 +96,7 @@
       const mass4 = parseFloat(entryForm.mass4.value);
         
 
-      const power4 = (mass4*g*gradient4/100*(distance4*1000/time4)+crr*mass4*g*Math.cos(gradient4/100)*(distance4*1000/time4)+0.5*rho*cda*(distance4*1000/time4)**2).toFixed(1);
+      const power4 = (mass4*g*gradient4/100*(distance4*1000/time4)+crr*mass4*g*Math.cos(gradient4/100)*(distance4*1000/time4)+0.5*rho*cda*(distance4*1000/time4)**2).toFixed(0);
       document.getElementById('power4').textContent = power4;
 
       }
@@ -111,7 +111,7 @@
       const power5 = parseFloat(entryForm.power5.value);
       const mass5 = parseFloat(entryForm.mass5.value);
 
-      const time5 = (distance5*3600/((-(mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))+Math.sqrt((mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))**2-4*0.5*rho*cda*(-power5)))/(2*0.5*rho*cda)*3.6)).toFixed(1);
+      const time5 = (distance5*3600/((-(mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))+Math.sqrt((mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))**2-4*0.5*rho*cda*(-power5)))/(2*0.5*rho*cda)*3.6)).toFixed(0);
       document.getElementById('time5').textContent = time5;
 
       }
