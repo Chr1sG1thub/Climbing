@@ -25,25 +25,36 @@
       <label for="mass1">Mass (kg):</label>
       <input type="number" id="mass1">
 
-      Power (W): <span id="power1">&nbsp;</span>
+      Power (W): <span id="power1">&nbsp;</span><br/>
 
       <label for="gradient2">Gradient (%):</label>
       <input type="number" id="gradient2">
 
-      <label for="distance2">Distance (km):</label>
-      <input type="number" id="distance2">
-
-      <label for="velocity2">Velocity (km/h):</label>
-      <input type="number" id="velocity2">
-
       <label for="power2">Power (W):</label>
       <input type="number" id="power2">
 
-      <label for="time2">Time (s):</label>
-      <input type="number" id="time2">
-
       <label for="mass2">Mass (kg):</label>
       <input type="number" id="mass2">
+
+      Velocity (km/h): <span id="velocity2">&nbsp;</span><br/>
+
+      <label for="gradient3">Gradient (%):</label>
+      <input type="number" id="gradient3">
+
+      <label for="distance3">Distance (km):</label>
+      <input type="number" id="distance3">
+
+      <label for="velocity3">Velocity (km/h):</label>
+      <input type="number" id="velocity3">
+
+      <label for="power3">Power (W):</label>
+      <input type="number" id="power3">
+
+      <label for="time3">Time (s):</label>
+      <input type="number" id="time3">
+
+      <label for="mass3">Mass (kg):</label>
+      <input type="number" id="mass3">
 
       <button type="submit">Submit</button>
 
@@ -70,6 +81,13 @@
 
       const power1 = (mass1*g*gradient1/100*velocity1/3.6+crr*mass1*g*Math.cos(gradient1/100)*velocity1/3.6+0.5*rho*cda*(velocity1/3.6)**2).toFixed(0);
       document.getElementById('power1').textContent = power1;
+
+      const gradient2 = parseFloat(entryForm.gradient2.value);
+      const power2 = parseFloat(entryForm.power2.value);
+      const mass2 = parseFloat(entryForm.mass2.value);
+
+      const velocity2 = (-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6;
+      document.getElementById('velocity2').textContent = velocity2;
 
     }; //entryForm.onsubmit
 
