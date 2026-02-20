@@ -39,13 +39,24 @@
       Velocity (km/h): <span id="velocity2">&nbsp;</span><br/><br/>
 
       <label for="gradient3">Gradient (%):</label>
-      <input type="number" id="gradient3">
-
-      <label for="distance3">Distance (km):</label>
-      <input type="number" id="distance3">
+      <input type="number" step "0.1" id="gradient3">
 
       <label for="velocity3">Velocity (km/h):</label>
-      <input type="number" id="velocity3">
+      <input type="number" step "0.1" id="velocity3">
+
+      <label for="power3">Power (W):</label>
+      <input type="number" id="power3">
+
+      Mass (kg): <span id="">&nbsp;</span><br/><br/>
+
+      <label for="gradient3">Gradient (%):</label>
+      <input type="number" step "0.1" id="gradient3">
+
+      <label for="distance3">Distance (km):</label>
+      <input type="number" step "0.1" id="distance3">
+
+      <label for="velocity3">Velocity (km/h):</label>
+      <input type="number" step "0.1" id="velocity3">
 
       <label for="power3">Power (W):</label>
       <input type="number" id="power3">
@@ -56,6 +67,12 @@
       <label for="mass3">Mass (kg):</label>
       <input type="number" id="mass3">
 
+      Velocity (km/h): <span id="velocity2">&nbsp;</span><br/><br/>
+
+ 
+      
+      <br/>
+      <br/>
       <button type="submit">Submit</button>
 
     </form>
@@ -86,8 +103,15 @@
       const power2 = parseFloat(entryForm.power2.value);
       const mass2 = parseFloat(entryForm.mass2.value);
 
-      const velocity2 = (-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+Math.sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6;
+      const velocity2 = ((-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+Math.sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6).toFixed(1);
       document.getElementById('velocity2').textContent = velocity2;
+
+      const gradient3 = parseFloat(entryForm.gradient3.value);
+      const velocity3 = parseFloat(entryForm.velocity3.value);
+      const power3 = parseFloat(entryForm.power3.value);
+
+      const mass3 = (power3-0.5*rho*cda*(gradient3/3.6)**2)/g/(velocity3/3.6)/(gradient3/100+crr*Math.cos(gradient3/100)).toFixed(1);
+      document.getElementById('mass3').textContent = mass3;
 
     }; //entryForm.onsubmit
 
