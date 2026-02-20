@@ -148,9 +148,6 @@
       const velocity3 = parseFloat(entryForm.velocity3.value);
       const power3 = parseFloat(entryForm.power3.value);
 
-
-        (H9-0.5*$B$3*$B$4*(G9/3.6)^2)/$B$1/(G9/3.6)/(F9/100+$B$2*cos(F9/100))
-
       const mass3 = (power3-0.5*rho*cda*(velocity3/3.6)**2)/g/(velocity3/3.6)/(gradient3/100+crr*Math.cos(gradient3/100)).toFixed(1);
       document.getElementById('mass3').textContent = mass3;
 
