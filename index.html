@@ -128,7 +128,7 @@
       const power6 = parseFloat(entryForm.power6.value);
       const time6 = parseFloat(entryForm.time6.value);
 
-      const mass6 = (power6-0.5*rho*cda*((distance6/time6*3600)/3.6)**2)/g/((distance6/time6*3600)/3.6)/(gradient6/100+crr*Math.cos(gradient6/100)).toFixed(1);
+      const mass6 = ((power6-0.5*rho*cda*((distance6/time6*3600)/3.6)**2)/g/((distance6/time6*3600)/3.6)/(gradient6/100+crr*Math.cos(gradient6/100))).toFixed(1);
       document.getElementById('mass6').textContent = mass6;
 
       }
