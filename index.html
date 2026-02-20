@@ -86,7 +86,7 @@
       const power2 = parseFloat(entryForm.power2.value);
       const mass2 = parseFloat(entryForm.mass2.value);
 
-      const velocity2 = (-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6;
+      const velocity2 = (-(mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))+Math.sqrt((mass2*g*(gradient2/100+crr*Math.cos(gradient2/100)))**2-4*0.5*rho*cda*(-power2)))/(2*0.5*rho*cda)*3.6;
       document.getElementById('velocity2').textContent = velocity2;
 
     }; //entryForm.onsubmit
