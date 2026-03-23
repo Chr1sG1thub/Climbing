@@ -124,7 +124,7 @@
 
       const time5 = (distance5*3600/((-(mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))+Math.sqrt((mass5*g*(gradient5/100+crr*Math.cos(gradient5/100)))**2-4*0.5*rho*cda*(-power5)))/(2*0.5*rho*cda)*3.6)).toFixed(0);
       const time5Plus1 = (distance5*3600/((-((mass5+1)*g*(gradient5/100+crr*Math.cos(gradient5/100)))+Math.sqrt(((mass5+1)*g*(gradient5/100+crr*Math.cos(gradient5/100)))**2-4*0.5*rho*cda*(-power5)))/(2*0.5*rho*cda)*3.6)).toFixed(0);
-      document.getElementById('time5').textContent = time5plus1-time5;
+      document.getElementById('time5').textContent = time5Plus1-time5;
 
       }
       
